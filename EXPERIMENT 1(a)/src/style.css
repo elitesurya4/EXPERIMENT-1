@@ -92,7 +92,7 @@
     color: maroon;
     font-family: 'bevel';
     text-align: center;
-    font-size: 3.5vw;
+    /* font-size: 3.5vw; */
 }
 #main_ckt{
     width: 50vw;
@@ -220,6 +220,8 @@
     text-align: center;
     font-size: 1.5vw;
   }
+  @media(max-width:1400px){
+  }
 /*---------------------------------Control Panel Section---------------------------------*/
 #cont-panel{
     height: 50vw;
@@ -240,7 +242,7 @@
     color: maroon;
     font-family: 'bevel';
     text-align: center;
-    font-size: 3.5vw;
+    /* font-size: 3.5vw; */
 }
 .switch {
     background-color: black;
@@ -479,7 +481,7 @@
     color: maroon;
     font-family: 'bevel';
     text-align: center;
-    font-size: 3.5vw;
+    /* font-size: 3.5vw; */
 }
 #table-1{
     /* background-color: whitesmoke; */
@@ -639,7 +641,7 @@
     color: maroon;
     font-family: 'bevel';
     text-align: center;
-    font-size: 2.6vw;
+    /* font-size: 2.6vw; */
     margin-top: 1.4vw;
 }
 #value-table{
