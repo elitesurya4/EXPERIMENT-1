@@ -1,7 +1,6 @@
 // --------------------POWER ON--------------------
 function poweron(){
   if(document.getElementById("power-switch").checked == true){
-    document.getElementById("am-value").value = "0";
     document.getElementById("instance-1").disabled = false;
     document.getElementById("instance-1").style.background = "blue";
     document.getElementById("instance-2").disabled = false;
@@ -26,7 +25,6 @@ function poweron(){
     document.getElementById("sim-2_s1").style.background = "red";
   }
   if(document.getElementById("power-switch").checked == false){
-      document.getElementById("am-value").value = "";
       document.getElementById("instance-1").disabled = true;
       document.getElementById("instance-1").style.background = "rgba(0, 0, 255, 0.404)";
       document.getElementById("instance-2").disabled = true;
@@ -41,6 +39,8 @@ function poweron(){
       document.getElementById("rth_ckt").style.display = "none";
       document.getElementById("vth_ckt").style.display = "none";
       document.getElementById("eqv_ckt").style.display = "none";
+      document.getElementById("am-value").style.display = "none";
+      document.getElementById("am-value1").style.display = "none";
       document.getElementById("vs-value").readOnly = true;
       document.getElementById("vth-value").readOnly = true;
       document.getElementById("rth-value").readOnly = true;
@@ -97,10 +97,16 @@ function vxil_ckt_sim() {
   document.getElementById("vth-label").style.display = "none";
   document.getElementById("rth-value").style.display = "none";
   document.getElementById("rth-label").style.display = "none";
+  document.getElementById("am-value").style.display = "block";
+  document.getElementById("am-value1").style.display = "none";
+  document.getElementById("am-value2").style.display = "none";
+  document.getElementById("am-value3").style.display = "none";
   document.getElementById("instance-5-text").style.display = "none";
   document.getElementById("input-fields-3").style.marginTop = "0vw";
-  
   document.getElementById("am-value").value = "0";
+  document.getElementById("am-value1").value = "";
+  document.getElementById("am-value2").value = "";
+  document.getElementById("am-value3").value = "";
 }
 
 
@@ -158,7 +164,6 @@ function vxrth_ckt_sim() {
   document.getElementById("vdc-value").style.display = "block";
   document.getElementById("vdc-value").readOnly = true;
   document.getElementById("vdc-label").style.display = "block";
-  document.getElementById("am-value").value = "0";
   document.getElementById("vth_ckt").style.display = "none";
   document.getElementById("eqv_ckt").style.display = "none";
   document.getElementById("rl-value").style.display = "block";
@@ -175,8 +180,16 @@ function vxrth_ckt_sim() {
   document.getElementById("vth-label").style.display = "none";
   document.getElementById("rth-value").style.display = "none";
   document.getElementById("rth-label").style.display = "none";
+  document.getElementById("am-value").style.display = "none";
+  document.getElementById("am-value1").style.display = "block";
+  document.getElementById("am-value2").style.display = "none";
+  document.getElementById("am-value3").style.display = "none";
   document.getElementById("instance-5-text").style.display = "none";
   document.getElementById("input-fields-3").style.marginTop = "0vw";
+  document.getElementById("am-value").value = "";
+  document.getElementById("am-value1").value = "0";
+  document.getElementById("am-value2").value = "";
+  document.getElementById("am-value3").value = "";
 
 }
 
@@ -199,7 +212,7 @@ function vxrth_calc(){
   // --------------------CALCULATION OF Rth FOR INSTANCE 2--------------------
   rth = (((parseFloat(r1)*parseFloat(r2))+(parseFloat(r2)*parseFloat(r3))+(parseFloat(r1)*parseFloat(r3)))/(parseFloat(r1)+parseFloat(r2)))
 
-  document.getElementById("am-value").value = rth.toPrecision(3);
+  document.getElementById("am-value1").value = rth.toPrecision(3);
   // document.getElementById("idc-value").value = idc.toPrecision(3);
   document.getElementById("rth-value").value = rth.toPrecision(3);
   // --------------------TABLE CREATION--------------------
@@ -236,7 +249,6 @@ function vxvth_ckt_sim() {
   document.getElementById("vdc-label").style.display = "none";
   document.getElementById("rl-value").style.display = "none";
   document.getElementById("rl-label").style.display = "none";
-  document.getElementById("am-value").value = "0";
   document.getElementById("vs-value").style.display = "block";
   document.getElementById("vs-label").style.display = "block";
   document.getElementById("r1-value").style.display = "block";
@@ -251,6 +263,14 @@ function vxvth_ckt_sim() {
   document.getElementById("rth-label").style.display = "none";
   document.getElementById("instance-5-text").style.display = "none";
   document.getElementById("input-fields-3").style.marginTop = "0vw";
+  document.getElementById("am-value").value = "";
+  document.getElementById("am-value1").value = "";
+  document.getElementById("am-value2").value = "0";
+  document.getElementById("am-value3").value = "";
+  document.getElementById("am-value").style.display = "none";
+  document.getElementById("am-value1").style.display = "none";
+  document.getElementById("am-value2").style.display = "block";
+  document.getElementById("am-value3").style.display = "none";
 }
 
 
@@ -270,12 +290,12 @@ function vxvth_calc(){
   // --------------------CALCULATION OF Vth FOR INSTANCE 3--------------------
   vth = ((parseFloat(vs)*parseFloat(r2))/(parseFloat(r1)+parseFloat(r2)))
 
-  document.getElementById("am-value").value = vth.toPrecision(3);
+  document.getElementById("am-value2").value = vth.toPrecision(3);
   document.getElementById("vth-value").value = vth.toPrecision(3);
   // --------------------TABLE CREATION--------------------
   table2 = document.getElementById("obs-table-3");
   arr2[0] = tabrowindex2 + 1;
-  arr2[1] = document.getElementById("am-value").value;
+  arr2[1] = document.getElementById("am-value2").value;
 
 
   if (table2.rows.length <= 15){
@@ -304,7 +324,6 @@ function eqv_ckt_sim() {
   document.getElementById("vdc-label").style.display = "none";
   document.getElementById("rl-value").style.display = "block";
   document.getElementById("rl-label").style.display = "block";
-  document.getElementById("am-value").value = "0";
   document.getElementById("vs-value").style.display = "none";
   document.getElementById("vs-label").style.display = "none";
   document.getElementById("r1-value").style.display = "none";
@@ -321,6 +340,14 @@ function eqv_ckt_sim() {
   document.getElementById("rth-label").style.display = "block";
   document.getElementById("instance-5-text").style.display = "none";
   document.getElementById("input-fields-3").style.marginTop = "5vw";
+  document.getElementById("am-value").value = "";
+  document.getElementById("am-value1").value = "";
+  document.getElementById("am-value2").value = "";
+  document.getElementById("am-value3").value = "0";
+  document.getElementById("am-value").style.display = "none";
+  document.getElementById("am-value1").style.display = "none";
+  document.getElementById("am-value2").style.display = "none";
+  document.getElementById("am-value3").style.display = "block";
 }
 
 
@@ -345,11 +372,11 @@ function eqv_calc(){
   // --------------------CALCULATION OF Il FOR INSTANCE 4--------------------
   Il_eqv = ((parseFloat(vth))/(parseFloat(rth)+parseFloat(rl)));
 
-  document.getElementById("am-value").value = Il_eqv.toPrecision(3);
+  document.getElementById("am-value3").value = Il_eqv.toPrecision(3);
   // --------------------TABLE CREATION--------------------
   table3 = document.getElementById("obs-table-4");
   arr3[0] = tabrowindex3 + 1;
-  arr3[1] = document.getElementById("am-value").value;
+  arr3[1] = document.getElementById("am-value3").value;
 
   if (table3.rows.length <= 15){
       var row3 = table3.insertRow(++tabrowindex3);
@@ -394,7 +421,6 @@ function vsvth_plot(){
   document.getElementById("vdc-label").style.display = "none";
   document.getElementById("rl-value").style.display = "none";
   document.getElementById("rl-label").style.display = "none";
-  document.getElementById("am-value").value = "0";
   document.getElementById("vs-value").style.display = "none";
   document.getElementById("vs-label").style.display = "none";
   document.getElementById("r1-value").style.display = "none";
@@ -410,6 +436,14 @@ function vsvth_plot(){
   document.getElementById("rth-value").style.display = "none";
   document.getElementById("rth-label").style.display = "none";
   document.getElementById("instance-5-text").style.display = "block";
+  document.getElementById("am-value").value = "";
+  document.getElementById("am-value1").value = "";
+  document.getElementById("am-value2").value = "";
+  document.getElementById("am-value3").value = "";
+  document.getElementById("am-value").style.display = "none";
+  document.getElementById("am-value1").style.display = "none";
+  document.getElementById("am-value2").style.display = "none";
+  document.getElementById("am-value3").style.display = "none";
 }
 
 

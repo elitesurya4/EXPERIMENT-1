@@ -141,13 +141,25 @@
     display: none;
 }
 #ammeter{
-    margin-top: -43vw;
-    margin-left: 28vw;
+    margin-top: 7vw;
+    margin-left:-28.5vw;
+}
+#ammeter1{
+    margin-top: 10.5vw;
+    margin-left:8.4vw;
+}
+#ammeter2{
+    margin-top: 15.2vw;
+    margin-left:5.85vw;
+}
+#ammeter3{
+    margin-top: 7.5vw;
+    margin-left:-5.2vw;
 }
 #ammeter-disp{
-    margin-left: -3.2vw;
+    margin-left: 3.2vw;
   }
-  #am-value{
+  #am-value,#am-value1,#am-value2,#am-value3{
     border: 0.66vw solid #8E8E8E;
     font-size: 2.28vw;
     width: 5vw;
@@ -158,6 +170,7 @@
     font-family:'digital-7';
     color: red;
     background-color: black;
+    display: none;
   }
 
   @media(max-width:1375px){
@@ -226,7 +239,7 @@
     width: 95vw;
     display: flex;
     margin-left: 51vw;
-    margin-top: -17.6vw;
+    margin-top: -50vw;
 }
 #control-panel{
     border: 0.33vw solid grey;
