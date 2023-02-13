@@ -65,6 +65,8 @@
     text-align: center;
     height: 100px;
 }
+
+
 /*---------------------------------Scrolling Section---------------------------------*/
 #warning{
     margin-top: 1vw;
@@ -73,6 +75,26 @@
     color: red;
     font-family: 'Klee One', cursive;
 }
+.inst-title{
+    font-family: 'Graduate', cursive !important;
+    font-weight: bold;
+}
+.move{
+    position: relative;
+    padding: 0;
+    display: flex;
+}
+#inst-btn{
+    background: rgb(123, 17, 17);
+    box-shadow:2px 2px  #47434c;
+    border: 1px solid black;
+    font-family: 'Graduate', cursive;
+}
+.btn-container{
+    padding-bottom: 0.7vw !important;
+}
+
+
 /*---------------------------------Simulator Section---------------------------------*/
 #sim-cont{
     height: 50vw;
@@ -97,138 +119,114 @@
 #main_ckt{
     width: 50vw;
     margin-left: -1vw;
-    margin-top: 13vw;
+    margin-top: 5vw;
     display: none;
 }
 #rth_ckt{
     width: 50vw;
-    margin-top: 13vw;
+    margin-left: -2.5vw;
+    margin-top: 5vw;
     display: none;
 }
 #vth_ckt{
-    width: 50vw;
-    margin-top: 13vw;
-    margin-left: -2vw;
+    width: 42vw;
+    margin-left: 3vw;
+    margin-top: 5vw;
     display: none;
 }
 #eqv_ckt{
     width: 50vw;
-    margin-top: 13vw;
+    margin-left: -1vw;
+    margin-top: 5vw;
     display: none;
 }
 #ammeter{
     margin-top: -43vw;
     margin-left: 28vw;
 }
-#dc-ammeter{
-    border: 0.3vw solid grey;
-    border-style: inset;
-    background: lightgrey;
-    width: 12vw;
-    position: relative;
-    height: 10vw;
-  }
-  #ammeter-title{
-    text-align: center;
-    font-size: 1.5vw;
-  }
-  #change-title{
-    text-align: center;
-    font-size: 1.5vw;
-    display: none;
-  }
-  #ammeter-disp{
+#ammeter-disp{
     margin-left: -3.2vw;
   }
   #am-value{
     border: 0.66vw solid #8E8E8E;
     font-size: 2.28vw;
-    width: 8vw;
+    width: 5vw;
     border-style: groove;
     text-align: center;
-    margin-left: 5vw;
-    margin-bottom: 10vw;
+    margin-left: 1.4vw;
+    margin-top: 6vw;
     font-family:'digital-7';
     color: red;
     background-color: black;
   }
-  #po-term{
-    border: 0.066vw solid black;
-    width: 1vw;
-    height: 1vw;
-    border-radius: 50vw;
-    position: relative;
-    margin-left: 11vw;
-    margin-top: -10vw;
+
+  @media(max-width:1375px){
+    #am-value{
+        margin-top: 6.5vw;
+    }
   }
-  #ne-term{
-    border: 0.066vw solid black;
-    width: 1vw;
-    height: 1vw;
-    border-radius: 50vw;
-    position: relative;
-    margin-left: 6vw;
-    margin-top: -1vw;
+  @media(max-width:1260px){
+    #am-value{
+        margin-top: 7vw;
+    }
   }
-  #vm-value{
-    border: 0.66vw solid #8E8E8E;
-    font-size: 2.28vw;
-    width: 8vw;
-    border-style: groove;
-    text-align: center;
-    margin-left: 5vw;
-    margin-bottom: 10vw;
-    font-family:'digital-7';
-    color: red;
-    background-color: black;
+  @media(max-width:1070px){
+    #am-value{
+        margin-top: 7.5vw;
+    }
   }
-  #p-term{
-    border: 0.066vw solid black;
-    width: 1vw;
-    height: 1vw;
-    border-radius: 50vw;
-    position: relative;
-    margin-left: 11vw;
-    margin-top: -10vw;
+  @media(max-width:890px){
+    #am-value{
+        margin-top: 8vw;
+    }
   }
-  #n-term{
-    border: 0.066vw solid black;
-    width: 1vw;
-    height: 1vw;
-    border-radius: 50vw;
-    position: relative;
-    margin-left: 6vw;
-    margin-top: -1vw;
+  @media(max-width:770px){
+    #am-value{
+        margin-top: 8.5vw;
+    }
   }
-#voltmeter{
-    margin-left: 10vw;
-    margin-top: -10vw;
-    display: none;
+  @media(max-width:738px){
+    #am-value{
+        margin-top: 15vw;
+    }
 }
-  #voltmeter-disp{
-    margin-left: -3.2vw;
+  @media(max-width:670px){
+    #am-value{
+        margin-top: 15.5vw;
+    }
+}
+  @media(max-width:640px){
+    #am-value{
+        margin-top: 16.5vw;
+    }
+}
+  @media(max-width:580px){
+    #am-value{
+        margin-top: 17.5vw;
+    }
   }
-  #dc-voltmeter,#dc-voltmeter-1{
-    border: 0.3vw solid grey;
-    border-style: inset;
-    background: lightgrey;
-    width: 12vw;
-    position: relative;
-    height: 10vw;
+  @media(max-width:520px){
+    #am-value{
+        margin-top: 18.5vw;
+    }
   }
-  #Voltmeter-title{
-    text-align: center;
-    font-size: 1.5vw;
+  @media(max-width:470px){
+    #am-value{
+        margin-top: 19.5vw;
+    }
   }
-  @media(max-width:1400px){
+  @media(max-width:430px){
+    #am-value{
+        margin-top: 20.5vw;
+    }
   }
-/*---------------------------------Control Panel Section---------------------------------*/
+  /*---------------------------------Control Panel Section---------------------------------*/
 #cont-panel{
     height: 50vw;
     width: 95vw;
     display: flex;
     margin-left: 51vw;
-    margin-top: -17vw;
+    margin-top: -17.6vw;
 }
 #control-panel{
     border: 0.33vw solid grey;
@@ -461,6 +459,8 @@
     font-size: 1.3vw;
     font-weight: bold;
 }
+
+
 /*---------------------------------Tabulation Section---------------------------------*/
 #tab-panel{
     height: 35vw;
@@ -620,7 +620,9 @@
       text-align: center;
       border: 0.066vw solid black;
   }
-/*---------------------------------Plotting Section---------------------------------*/
+
+
+  /*---------------------------------Plotting Section---------------------------------*/
 #tab-panel-1{
     height: 45vw;
     width: 98vw;
@@ -711,6 +713,8 @@
     height: 27.5vw;
     margin-top: 1vw;
   }
+
+
   #next-btn{
     border: 0.2vw solid black;
     width: 10vw;

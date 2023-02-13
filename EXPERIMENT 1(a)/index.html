@@ -36,16 +36,52 @@
     <title>VERIFICATION OF THEVENIN'S THEOREM</title>
 </head>
 <body>
+
+
 <!-------------Header Section------------->
 <div class="container-fluid" id="header">
     <div class="card card-body" id="header-glass">
         <p class="display-6">Verification of Thevenin's Theorem</p>
     </div>
 </div>
+
+
 <!-------------Scrolling Section------------->
 <div class="container-fluid" id="warning">
-    <marquee><h5>Read the instructions carefully before starting the experiment. Switch on the simulator before starting simulation.</h5></marquee>
-</div>
+    <div class="move" id="cssmarquee">
+        <div class="btn-container">
+            <button class="btn btn-primary" id="inst-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">INSTRUCTIONS</button>
+            <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+                <div class="offcanvas-header">
+                    <h5 class="inst-title" id="offcanvasBottomLabel">INSTRUCTIONS</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body small">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid ex minus laudantium sunt obcaecati nisi eveniet. Atque voluptatum sunt quo ratione commodi. Nisi totam cupiditate iure ipsa. Laudantium, minus dolores.
+                    Nobis excepturi suscipit amet nisi, consequuntur modi itaque quia dicta sapiente delectus reiciendis rem voluptas aut dolor officia quas autem fugit quos necessitatibus? Doloribus repellat numquam voluptatem eum quis ullam!
+                    Consectetur, dolore. Accusamus repellat ipsa quia quam. Rem perferendis deleniti alias doloremque molestiae aliquam, facilis, repellendus repudiandae rerum cum explicabo? Neque laboriosam est quam soluta totam. Ab temporibus nobis corporis.
+                    Vitae, dolorem! Illum perspiciatis mollitia libero possimus voluptate, cum, placeat voluptatum pariatur maxime tempore quibusdam velit a magni beatae, incidunt quos. Repellendus quod amet maiores perferendis quam adipisci sapiente autem!
+                    Quo perferendis nisi minima quis ut quas molestiae placeat velit nemo nobis quod ducimus vero autem suscipit accusamus unde, ipsum inventore incidunt facere, blanditiis quaerat harum voluptate magnam eligendi? Eaque.
+                    Nulla aliquid sed quam, reiciendis assumenda voluptates laudantium quidem quis delectus blanditiis dignissimos accusamus nostrum ratione molestiae voluptatum, fugit at recusandae. Quos, nesciunt quia. Obcaecati dolore quisquam modi quis? Corrupti.
+
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti ullam eveniet excepturi ut tenetur quam similique voluptate tempore quod enim molestias, aliquam ratione cum autem placeat blanditiis nesciunt ipsum explicabo!
+                    Cupiditate autem consequuntur inventore vitae repudiandae harum laborum, ipsa dolore, alias necessitatibus eius dolorum maxime dolor doloremque rerum quia, perferendis fuga? Eveniet, expedita nesciunt. Odio omnis est vel nam reiciendis.
+                    Nemo obcaecati illum, amet soluta nihil suscipit unde autem, debitis et cupiditate dolorem vitae dicta expedita porro sunt perferendis doloribus, fugit fugiat ratione atque? Atque magnam eligendi maxime sunt recusandae?
+                    Laboriosam asperiores minus labore! Natus, illum quam. Nulla eaque et doloremque maiores consequuntur! Omnis amet consectetur, id iste, quas ipsam sed neque totam laborum provident, doloribus dolores nihil? Ea, cum!
+                    Accusantium, eum doloremque cum aliquam doloribus magni nesciunt nisi enim quas totam facilis molestiae, deserunt blanditiis assumenda a inventore ducimus illum ipsa dicta dignissimos aut perferendis ex! Qui, blanditiis earum?
+                    Facilis iste, impedit veritatis assumenda obcaecati atque ea molestiae, eveniet optio autem maiores quaerat ratione, itaque sequi quae excepturi veniam voluptas esse doloribus id fugiat neque ullam fugit sit. Earum.
+                    Soluta rem repellat natus excepturi cumque quasi! Eligendi doloribus reprehenderit facere cumque, tempora officiis distinctio quaerat dolor totam veritatis esse impedit, voluptate mollitia unde ratione sequi, quibusdam commodi praesentium similique!
+                    Illo dolorem distinctio non corrupti beatae culpa quam nihil obcaecati earum. Animi consequatur id quas aperiam ad magni, at dignissimos dolorum mollitia optio deleniti, veritatis, odit unde quasi atque. Quod.
+                    Repudiandae quam vitae libero illo enim animi, beatae at quae, est omnis quod, totam facere modi? Vel fugit, laborum accusantium quae qui, ullam quaerat exercitationem ab aspernatur dolorem repellat? Aspernatur!
+                    Nihil aperiam quis corrupti dolore, odio voluptatem tempore eos odit quaerat eveniet modi expedita rerum explicabo voluptas deleniti ab est sit vel repellat animi sed! A laborum voluptates officiis quia?
+                </div>
+            </div>
+        </div>
+        <marquee><h5>Read the instructions carefully before starting the experiment. Switch on the simulator before starting simulation.</h5></marquee>
+    </div>
+</div>   
+
+
 <!-------------Simulator Section------------->
 <div id="sim-cont">
     <div id="simulator"><p class="display-5" id="sim-header">SIMULATOR PANEL</p>
@@ -56,25 +92,9 @@
     </div>
 </div>
 <div id="ammeter">
-    <div id="dc-ammeter">
-        <p id="ammeter-title">DC AMMETER</p>
-        <p id="change-title">DC VOLTMETER</p>
         <div id="ammeter-disp">
             <a id="am-disp"><input id="am-value" value="" type="text" readonly=""></a>
-            <div id="po-term"></div>
-            <div id="ne-term"></div>
         </div>
-    </div>
-</div>
-<div id="voltmeter">
-    <div id="dc-voltmeter">
-        <p id="Voltmeter-title">DC VOLTMETER</p>
-        <div id="voltmeter-disp">
-            <a id="vm-disp"><input id="vm-value" value="0" type="text" readonly=""></a>
-            <div id="p-term"></div>
-            <div id="n-term"></div>
-        </div>
-    </div>
 </div>
 <!-------------Control Panel Section------------->
 <div id="cont-panel">
@@ -186,6 +206,8 @@
         </div>
     </div>
 </div>
+
+
 <!-------------Tabulation Section------------->
 <div id="tab-panel">
     <div id="tabulation-panel">
@@ -233,6 +255,8 @@
         </div>
     </div>
 </div>
+
+
 <!-------------Plotting Section------------->
 <div id="tab-panel-1">
     <div id="tabulation-panel-1">
@@ -261,6 +285,8 @@
 
     </div>
 </div>
+
+
 <button id="next-btn">NEXT</button>
 </body>
 </html>
