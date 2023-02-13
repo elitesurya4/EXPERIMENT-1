@@ -581,7 +581,107 @@
     font-weight: bold;
 }
 
-
+@media(max-width:1370px){
+    #cont-panel{
+        height: 55vw;
+        margin-top: -55vw;
+    }
+    #sim-cont{
+        height: 55vw;
+    }
+  }
+@media(max-width:1100px){
+    #cont-panel{
+        height: 60vw;
+        margin-top: -60vw;
+    }
+    #sim-cont{
+        height: 60vw;
+    }
+    #input-fields-1,#input-fields-4,#input-fields-5,#input-fields-6,#input-fields-7,#input-fields-8{
+        margin-left: 0.5vw;
+    }
+  }
+@media(max-width:1000px){
+    #input-fields-1,#input-fields-4,#input-fields-5,#input-fields-6,#input-fields-7,#input-fields-8{
+        max-width: 40vw;
+    }
+    #input-fields-1,#input-fields-4,#input-fields-5,#input-fields-6,#input-fields-7,#input-fields-8{
+        margin-left: 2.5vw;
+    }
+  }
+@media(max-width:900px){
+    #cont-panel{
+        height: 65vw;
+        margin-top: -65vw;
+    }
+    #sim-cont{
+        height: 65vw;
+    }
+  }
+@media(max-width:860px){
+    #cont-panel{
+        height: 70vw;
+        margin-top: -70vw;
+    }
+    #sim-cont{
+        height: 70vw;
+    }
+  }
+@media(max-width:770px){
+    #cont-panel{
+        height: 75vw;
+        margin-top: -75vw;
+    }
+    #sim-cont{
+        height: 75vw;
+    }
+  }
+@media(max-width:754px){
+    #cont-panel{
+        height: 85vw;
+        margin-top: -85vw;
+    }
+    #sim-cont{
+        height: 85vw;
+    }
+  }
+@media(max-width:650px){
+    #cont-panel{
+        height: 95vw;
+        margin-top: -95vw;
+    }
+    #sim-cont{
+        height: 95vw;
+    }
+  }
+@media(max-width:550px){
+    #cont-panel{
+        height: 100vw;
+        margin-top: -100vw;
+    }
+    #sim-cont{
+        height: 100vw;
+    }
+  }
+@media(max-width:518px){
+    #cont-panel{
+        height: 110vw;
+        margin-top: -110vw;
+    }
+    #sim-cont{
+        height: 110vw;
+    }
+  }
+@media(max-width:445px){
+    #cont-panel{
+        height: 115vw;
+        margin-top: -115vw;
+    }
+    #sim-cont{
+        height: 115vw;
+    }
+  }
 /*---------------------------------Tabulation Section---------------------------------*/
 #tab-panel{
     height: 35vw;
