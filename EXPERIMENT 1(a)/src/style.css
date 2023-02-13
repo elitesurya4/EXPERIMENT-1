@@ -182,6 +182,12 @@
     #am-value{
         margin-top: 7vw;
     }
+    #am-value2{
+        margin-top: 7vw;
+    }
+    #am-value3{
+        margin-top: 7vw;
+    }
   }
   @media(max-width:1070px){
     #am-value{
@@ -190,6 +196,12 @@
   }
   @media(max-width:890px){
     #am-value{
+        margin-top: 8vw;
+    }
+    #am-value2{
+        margin-top: 8vw;
+    }
+    #am-value3{
         margin-top: 8vw;
     }
   }
@@ -202,6 +214,12 @@
     #am-value{
         margin-top: 15vw;
     }
+    #am-value2{
+        margin-top: 15vw;
+    }
+    #am-value3{
+        margin-top: 15vw;
+    }
 }
   @media(max-width:670px){
     #am-value{
@@ -210,6 +228,12 @@
 }
   @media(max-width:640px){
     #am-value{
+        margin-top: 16.5vw;
+    }
+    #am-value2{
+        margin-top: 16.5vw;
+    }
+    #am-value3{
         margin-top: 16.5vw;
     }
 }
@@ -291,6 +315,30 @@
   @media(max-width:430px){
     #am-value1{
         margin-top: 20.5vw;
+    }
+  }
+  @media(max-width:550px){
+    #am-value2{
+        margin-top: 17.5vw;
+    }
+    #am-value3{
+        margin-top: 17.5vw;
+    }
+  }
+  @media(max-width:500px){
+    #am-value2{
+        margin-top: 18.5vw;
+    }
+    #am-value3{
+        margin-top: 18.5vw;
+    }
+  }
+  @media(max-width:450px){
+    #am-value2{
+        margin-top: 19.5vw;
+    }
+    #am-value3{
+        margin-top: 19.5vw;
     }
   }
   /*---------------------------------Control Panel Section---------------------------------*/
