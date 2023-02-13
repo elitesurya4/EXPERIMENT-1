@@ -1,6 +1,6 @@
-window.addEventListener("resize", function() {
-  if (window.innerWidth < 1100) {
-    alert("Please rotate your device to landscape mode for a better viewing experience");
+window.addEventListener("orientationchange", function() {
+  if (window.innerHeight > window.innerWidth) {
+    alert("Please rotate your device to landscape orientation.");
   }
 });
 
