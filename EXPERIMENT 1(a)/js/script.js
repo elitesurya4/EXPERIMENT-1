@@ -1,3 +1,9 @@
+window.addEventListener("resize", function() {
+  if (window.innerWidth < 981) {
+    alert("Please rotate your device to landscape mode for a better viewing experience");
+  }
+});
+
 // --------------------POWER ON--------------------
 function poweron(){
   if(document.getElementById("power-switch").checked == true){
