@@ -990,17 +990,3 @@
     text-decoration: none;
     display: none;
   }
-
-
-
-
-  #rotate-warning {
-    display: none;
-  }
-  
-  @media only screen and (max-device-width: 660px) and (orientation: portrait) {
-    #rotate-warning {
-      display: block;
-    }
-  }
-  

@@ -1,12 +1,3 @@
-window.addEventListener("orientationchange", function() {
-  if (window.orientation === 90 || window.orientation === -90) {
-    document.getElementById("rotate-warning").style.display = "none";
-  } else {
-    document.getElementById("rotate-warning").style.display = "block";
-  }
-});
-
-
 // --------------------POWER ON--------------------
 function poweron(){
   if(document.getElementById("power-switch").checked == true){
