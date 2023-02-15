@@ -850,7 +850,11 @@
       text-align: center;
       border: 0.066vw solid black;
   }
-
+  @media(max-width:720px){
+    #tab-panel{
+        height: 40vw;
+    }
+  }
 
   /*---------------------------------Plotting Section---------------------------------*/
 #tab-panel-1{
@@ -994,7 +998,7 @@
     display: none;
   }
   
-  @media only screen and (max-device-width: 480px) and (orientation: portrait) {
+  @media only screen and (max-device-width: 660px) and (orientation: portrait) {
     #rotate-warning {
       display: block;
     }
