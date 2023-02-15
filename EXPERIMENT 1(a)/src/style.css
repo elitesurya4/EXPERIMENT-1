@@ -681,6 +681,15 @@
     #sim-cont{
         height: 115vw;
     }
+}
+@media(max-width:376px){
+    #cont-panel{
+        height: 120vw;
+        margin-top: -120vw;
+    }
+    #sim-cont{
+        height: 120vw;
+    }
   }
 /*---------------------------------Tabulation Section---------------------------------*/
 #tab-panel{
@@ -977,3 +986,17 @@
     text-decoration: none;
     display: none;
   }
+
+
+
+
+  #rotate-warning {
+    display: none;
+  }
+  
+  @media only screen and (max-device-width: 480px) and (orientation: portrait) {
+    #rotate-warning {
+      display: block;
+    }
+  }
+  
